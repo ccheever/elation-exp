@@ -4,13 +4,21 @@ import {
   StyleSheet,
   Text,
   View,
+  WebView,
 } from 'react-native';
 
 class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up main.js to start working on your app!</Text>
+      <View style={{
+          paddingTop: 20,
+          backgroundColor: '#006F9C',
+          flex: 1,
+      }}>
+        <WebView
+          source={{uri: 'https://app.elationpassport.com/'}}
+          style={{marginTop: 0, flex: 1,}}
+        />
       </View>
     );
   }
